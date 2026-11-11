@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Payment Jajan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-neutral-800 font-sans leading-normal">
+
+  <main class="max-w-xl mx-auto px-5 pt-12 pb-10">
+
+    <!-- Judul -->
+    <h1 class="text-4xl font-extrabold leading-tight mb-10">
+      FORM PAYMENT<br />JAJAN BARENG KIYA
+    </h1>
+
+    <!-- Info metode pembayaran -->
+    <section class="mb-12">
+      <h2 class="text-lg font-bold mb-5">METODE PEMBAYARAN (Pilih salah satu)</h2>
+
+      <h3 class="font-bold mb-2">1. QRIS</h3>
+<img src="qrisjbk.jpeg" alt="QRIS" class="w-full rounded-xl mb-6" />
+        <p class="text-center text-sm text-pink-400 mt-3">jangan lupa send proof, ya!</p>
+      </div>
+
+      <h3 class="font-bold mb-1">2. ShopeePay</h3>
+      <p class="mb-5">0813-7070-4684 a/n AZKIYA RAIHANA</p>
+
+      <h3 class="font-bold mb-1">3. BCA</h3>
+      <p>0710477906 a/n AZKIYA RAIHANA</p>
+    </section>
+
+    <!-- Form -->
+    <form action="sukses.html" method="get" class="space-y-8">
+      <p class="text-lg font-bold">❗ JAM DAN TANGGAL JANGAN DITUTUP ❗</p>
+
+      <div>
+        <label for="nama" class="block text-2xl font-bold mb-2">
+          Nama + No. belakang
+          <span class="inline-flex items-center justify-center w-6 h-6 text-base rounded-full bg-neutral-200 align-middle ml-1">*</span>
+        </label>
+        <p class="text-neutral-500 mb-2">Cth : Kiya 4684</p>
+        <input id="nama" name="nama" type="text" required
+          class="w-full border border-neutral-300 rounded-xl px-4 py-3 shadow focus:outline-none focus:border-black focus:ring-2 focus:ring-black/10" />
+      </div>
+
+      <div>
+        <label for="barang" class="block text-2xl font-bold mb-2">
+          Nama barang
+          <span class="inline-flex items-center justify-center w-6 h-6 text-base rounded-full bg-neutral-200 align-middle ml-1">*</span>
+        </label>
+        <input id="barang" name="barang" type="text" required
+          class="w-full border border-neutral-300 rounded-xl px-4 py-3 shadow focus:outline-none focus:border-black focus:ring-2 focus:ring-black/10" />
+      </div>
+
+      <div>
+        <label for="metode" class="block text-2xl font-bold mb-2">
+          Payment kemana
+          <span class="inline-flex items-center justify-center w-6 h-6 text-base rounded-full bg-neutral-200 align-middle ml-1">*</span>
+        </label>
+        <select id="metode" name="metode" required
+          class="w-full border border-neutral-300 rounded-xl px-4 py-3 shadow bg-white focus:outline-none focus:border-black focus:ring-2 focus:ring-black/10">
+          <option value="" selected disabled></option>
+          <option>QRIS</option>
+          <option>ShopeePay</option>
+          <option>BCA</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="bukti" class="block text-2xl font-bold mb-2">
+          PROOF PAYMENT
+          <span class="inline-flex items-center justify-center w-6 h-6 text-base rounded-full bg-neutral-200 align-middle ml-1">*</span>
+        </label>
+        <div class="border-2 border-dashed border-neutral-300 rounded-xl p-8 text-center text-neutral-500">
+          <p class="font-semibold mb-4">⬆️ Pilih file bukti pembayaran</p>
+          <input id="bukti" name="bukti" type="file" accept="image/*,.pdf" required
+            class="max-w-full text-sm file:mr-4 file:rounded-lg file:border-0 file:bg-neutral-200 file:px-4 file:py-2 file:font-semibold hover:file:bg-neutral-300" />
+          <small class="block mt-4">Maksimal 10 MB</small>
+        </div>
+      </div>
+
+      <button type="submit"
+        class="bg-black text-white font-bold rounded-xl px-6 py-3 hover:bg-neutral-700 active:scale-95 transition">
+        Submit →
+      </button>
+    </form>
+
+  </main>
+
+</body>
+</html>

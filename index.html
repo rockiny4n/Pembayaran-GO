@@ -1,111 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Form Payment Jajan</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="bg-rose-50 text-slate-900 font-sans leading-normal">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff1f2" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Jajan Bareng Kiya</title>
+  </head>
+  <body class="bg-rose-50 text-slate-900 font-sans leading-normal">
+    <div id="payment-page" class="min-h-screen">
+      <header class="sticky top-0 z-20 border-b border-pink-200 bg-white/90 backdrop-blur">
+        <nav class="mx-auto flex max-w-xl items-center justify-between px-5 py-3">
+          <a href="#" class="text-lg font-extrabold text-pink-500">🧸 Jajan Bareng Kiya</a>
+          <ul class="flex gap-5 text-sm font-semibold text-neutral-600">
+            <li><a href="#metode" class="transition hover:text-pink-500">Metode</a></li>
+            <li><a href="#form" class="transition hover:text-pink-500">Form</a></li>
+          </ul>
+        </nav>
+      </header>
 
-<header class="sticky top-0 z-20 bg-white/90 backdrop-blur border-b border-pink-200">
-  <nav class="max-w-xl mx-auto px-5 py-3 flex items-center justify-between">
-    <a href="pembayaran.html" class="font-extrabold text-pink-500 text-lg">🧸 Jajan Bareng Kiya</a>
-    <ul class="flex gap-5 text-sm font-semibold text-neutral-600">
-      <li><a href="#metode" class="hover:text-pink-500 transition">Metode</a></li>
-      <li><a href="#form" class="hover:text-pink-500 transition">Form</a></li>
-    </ul>
-  </nav>
-</header>
+      <main class="mx-auto max-w-xl px-5 pb-10 pt-12">
+        <h1 class="mb-10 text-4xl font-extrabold leading-tight">
+          FORM PAYMENT<br />JAJAN BARENG KIYA
+        </h1>
 
-  <main class="max-w-xl mx-auto px-5 pt-12 pb-10">
+        <section id="metode" class="mb-12">
+          <h2 class="mb-5 text-lg font-bold">METODE PEMBAYARAN (Pilih salah satu)</h2>
 
-    <!-- Judul -->
-    <h1 class="text-4xl font-extrabold leading-tight mb-10">
-      FORM PAYMENT<br />JAJAN BARENG KIYA
-    </h1>
+          <h3 class="mb-2 font-bold">1. QRIS</h3>
+          <img src="./qrisjbk.jpeg" alt="QRIS" class="mb-2 w-full rounded-xl" />
+          <p class="mb-6 text-center text-sm text-pink-400">jangan lupa send proof, ya!</p>
 
-    <!-- Info metode pembayaran -->
-    <section id="metode" class="mb-12">
-      <h2 class="text-lg font-bold mb-5">METODE PEMBAYARAN (Pilih salah satu)</h2>
+          <h3 class="mb-1 font-bold">2. ShopeePay</h3>
+          <p class="mb-5">0813-7070-4684 a/n AZKIYA RAIHANA</p>
 
-      <h3 class="font-bold mb-2">1. QRIS</h3>
-<img src="qrisjbk.jpeg" alt="QRIS" class="w-full rounded-xl mb-6" />
-        <p class="text-center text-sm text-pink-400 mt-3">jangan lupa send proof, ya!</p>
-      </div>
+          <h3 class="mb-1 font-bold">3. BCA</h3>
+          <p>0710477906 a/n AZKIYA RAIHANA</p>
+        </section>
 
-      <h3 class="font-bold mb-1">2. ShopeePay</h3>
-      <p class="mb-5">0813-7070-4684 a/n AZKIYA RAIHANA</p>
+        <form id="form" class="space-y-8">
+          <p class="text-lg font-bold">❗ JAM DAN TANGGAL JANGAN DITUTUP ❗</p>
 
-      <h3 class="font-bold mb-1">3. BCA</h3>
-      <p>0710477906 a/n AZKIYA RAIHANA</p>
-    </section>
+          <div>
+            <label for="nama" class="mb-2 block text-2xl font-bold">
+              Nama + No. belakang
+              <span class="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 align-middle text-base">*</span>
+            </label>
+            <p class="mb-2 text-neutral-500">Cth : Kiya 4684</p>
+            <input id="nama" name="nama" type="text" required
+              class="w-full rounded-xl border border-neutral-300 px-4 py-3 shadow focus:border-black focus:outline-none focus:ring-2 focus:ring-black/10" />
+          </div>
 
-    <!-- Form -->
-    <form id="form" class="space-y-8">
-      <p class="text-lg font-bold">❗ JAM DAN TANGGAL JANGAN DITUTUP ❗</p>
+          <div>
+            <label for="barang" class="mb-2 block text-2xl font-bold">
+              Nama barang
+              <span class="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 align-middle text-base">*</span>
+            </label>
+            <input id="barang" name="barang" type="text" required
+              class="w-full rounded-xl border border-neutral-300 px-4 py-3 shadow focus:border-black focus:outline-none focus:ring-2 focus:ring-black/10" />
+          </div>
 
-      <div>
-        <label for="nama" class="block text-2xl font-bold mb-2">
-          Nama + No. belakang
-          <span class="inline-flex items-center justify-center w-6 h-6 text-base rounded-full bg-neutral-200 align-middle ml-1">*</span>
-        </label>
-        <p class="text-neutral-500 mb-2">Cth : Kiya 4684</p>
-        <input id="nama" name="nama" type="text" required
-          class="w-full border border-neutral-300 rounded-xl px-4 py-3 shadow focus:outline-none focus:border-black focus:ring-2 focus:ring-black/10" />
-      </div>
+          <div>
+            <label for="metode" class="mb-2 block text-2xl font-bold">
+              Payment kemana
+              <span class="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 align-middle text-base">*</span>
+            </label>
+            <select id="metode" name="metode" required
+              class="w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 shadow focus:border-black focus:outline-none focus:ring-2 focus:ring-black/10">
+              <option value="" disabled selected></option>
+              <option>QRIS</option>
+              <option>ShopeePay</option>
+              <option>BCA</option>
+            </select>
+          </div>
 
-      <div>
-        <label for="barang" class="block text-2xl font-bold mb-2">
-          Nama barang
-          <span class="inline-flex items-center justify-center w-6 h-6 text-base rounded-full bg-neutral-200 align-middle ml-1">*</span>
-        </label>
-        <input id="barang" name="barang" type="text" required
-          class="w-full border border-neutral-300 rounded-xl px-4 py-3 shadow focus:outline-none focus:border-black focus:ring-2 focus:ring-black/10" />
-      </div>
+          <div>
+            <label for="bukti" class="mb-2 block text-2xl font-bold">
+              PROOF PAYMENT
+              <span class="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-200 align-middle text-base">*</span>
+            </label>
+            <div class="rounded-xl border-2 border-dashed border-neutral-300 p-8 text-center text-neutral-500">
+              <p class="mb-4 font-semibold">⬆️ Pilih file bukti pembayaran</p>
+              <input id="bukti" name="bukti" type="file" accept="image/*,.pdf" required
+                class="max-w-full text-sm file:mr-4 file:rounded-lg file:border-0 file:bg-neutral-200 file:px-4 file:py-2 file:font-semibold hover:file:bg-neutral-300" />
+              <small class="mt-4 block">Maksimal 10 MB</small>
+            </div>
+          </div>
 
-      <div>
-        <label for="metode" class="block text-2xl font-bold mb-2">
-          Payment kemana
-          <span class="inline-flex items-center justify-center w-6 h-6 text-base rounded-full bg-neutral-200 align-middle ml-1">*</span>
-        </label>
-        <select id="metode" name="metode" required
-          class="w-full border border-neutral-300 rounded-xl px-4 py-3 shadow bg-white focus:outline-none focus:border-black focus:ring-2 focus:ring-black/10">
-          <option value="" selected disabled></option>
-          <option>QRIS</option>
-          <option>ShopeePay</option>
-          <option>BCA</option>
-        </select>
-      </div>
+          <button type="submit"
+            class="rounded-xl bg-black px-6 py-3 font-bold text-white transition hover:bg-neutral-700 active:scale-95">
+            Submit →
+          </button>
+        </form>
+      </main>
 
-      <div>
-        <label for="bukti" class="block text-2xl font-bold mb-2">
-          PROOF PAYMENT
-          <span class="inline-flex items-center justify-center w-6 h-6 text-base rounded-full bg-neutral-200 align-middle ml-1">*</span>
-        </label>
-        <div class="border-2 border-dashed border-neutral-300 rounded-xl p-8 text-center text-neutral-500">
-          <p class="font-semibold mb-4">⬆️ Pilih file bukti pembayaran</p>
-          <input id="bukti" name="bukti" type="file" accept="image/*,.pdf" required
-            class="max-w-full text-sm file:mr-4 file:rounded-lg file:border-0 file:bg-neutral-200 file:px-4 file:py-2 file:font-semibold hover:file:bg-neutral-300" />
-          <small class="block mt-4">Maksimal 10 MB</small>
+      <footer class="mt-10 border-t border-pink-200 bg-white/80">
+        <div class="mx-auto max-w-xl space-y-2 px-5 py-8 text-center text-sm text-neutral-500">
+          <p class="font-bold text-pink-400">thankies &lt;3 🧸</p>
+          <p>Betah betah jajan disini yaa &lt;3</p>
+          <p>&copy; 2026 Jajan Bareng Kiya • Azkiya Raihana 26110300008</p>
         </div>
-      </div>
+      </footer>
+    </div>
 
-      <button type="submit"
-        class="bg-black text-white font-bold rounded-xl px-6 py-3 hover:bg-neutral-700 active:scale-95 transition">
-        Submit →
-      </button>
-    </form>
+    <div id="success-page" class="hidden min-h-screen bg-white text-neutral-800">
+      <main class="mx-auto flex min-h-screen max-w-xl flex-col items-center justify-center px-5 text-center">
+        <div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-yellow-100 via-pink-100 to-blue-100 text-5xl">
+          ✅
+        </div>
 
-  </main>
+        <h1 class="mb-3 text-4xl font-extrabold leading-tight">SUDAH SUBMIT!</h1>
+        <p class="mb-2 text-lg text-neutral-600">Bukti pembayaran kamu sudah terkirim.</p>
+        <p class="mb-10 text-neutral-500">Tunggu konfirmasi ya, thankies 💗</p>
 
-<footer class="border-t border-pink-200 bg-white/80 mt-10">
-  <div class="max-w-xl mx-auto px-5 py-8 text-center text-sm text-neutral-500 space-y-2">
-    <p class="text-pink-400 font-bold">thankies &lt;3 🧸</p>
-    <p>Betah betah jajan disini yaa <3</p>
-    <p>&copy; 2026 Jajan Bareng Kiya • Azkiya Raihana 26110300008</p>
-  </div>
-</footer>
+        <button id="back-button" type="button"
+          class="rounded-xl bg-black px-6 py-3 font-bold text-white transition hover:bg-neutral-700 active:scale-95">
+          ← Isi form lagi
+        </button>
+      </main>
+    </div>
 
-</body>
+    <script>
+      const paymentPage = document.getElementById('payment-page')
+      const successPage = document.getElementById('success-page')
+      const form = document.getElementById('form')
+      const backButton = document.getElementById('back-button')
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault()
+        paymentPage.classList.add('hidden')
+        successPage.classList.remove('hidden')
+        window.scrollTo({ top: 0 })
+      })
+
+      backButton.addEventListener('click', () => {
+        successPage.classList.add('hidden')
+        paymentPage.classList.remove('hidden')
+        form.reset()
+        window.scrollTo({ top: 0 })
+      })
+    </script>
+  </body>
 </html>
